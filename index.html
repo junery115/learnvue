@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learing vue</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+    
+    <h1>Learning Vue :) </h1>
+
+    <div id="app">
+        <h2>I am the template</h2>
+        <h3>{{title}} - {{author}} - {{age}}</h3>
+
+        <button v-on:click="age++">Increase age</button>
+        <button v-on:click="age--">Increase age</button>
+        <!-- <div @click="changeTitle()">Change book title</div> -->
+        <div @click="changeTitle('Oathbringer')">Change book title</div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

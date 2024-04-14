@@ -3,6 +3,7 @@ const app = Vue.createApp({
     //data templates (the code below with data(){} is a short way of creating a function inside an object)
     data(){
         return {
+            showBooks : true,
             title: 'The Final Empire',
             author: 'Brandon Sanderson',
             age: 45
@@ -10,13 +11,11 @@ const app = Vue.createApp({
     },
     //methods functions or methods
     methods: {
-        changeTitle(title){
-            // this.title = 'Words of Radiance'
-            // this.title = 'Words of Radiance'
-            this.title = title
-            
+            toggleShowBooks(){
+                this.showBooks = !this.showBooks
+            }
         }
-    }
+    
 })
 
 app.mount('#app')

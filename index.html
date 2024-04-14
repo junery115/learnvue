@@ -11,17 +11,18 @@
 
     <div id="app">
         <div v-if="showBooks">
-            <h3>{{title}} - {{author}} - {{age}}</h3>
+            <ul>
+                <li v-for="book in books">
+                  <h3>{{book.title}}</h3>
+                   <p> {{book.author}} </p> 
+                </li>
+            </ul>
         </div>
         <button @click="toggleShowBooks">
             <span v-if="showBooks">Hide books</span>
-            <!-- <span v-if="!showBooks">Show books</span> -->
             <span v-else>Show books</span>
         </button>
 
-            <!-- when we use this it only uses css to hide the elt, but above it 
-            actually removes the elt from the dom -->
-        <div v-show="showBooks">currently showing books</div>
 
     </div>
 

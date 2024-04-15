@@ -20,6 +20,13 @@ const app = Vue.createApp({
             toggleIsFav(book){
                 book.isFav = !book.isFav
             }
+        }, 
+
+        //computed properties are a way to define data properties that depend on other data properties, like the filteredBooks array in this case depends on the books array
+        computed: {
+            filteredBooks(){
+                return this.books.filter((book) => book.isFav)
+            }
         }
     
 })
